@@ -1,0 +1,25 @@
+image viewer -- gpicview
+web cam settings -- guvcview
+wifi selection -- wifi-menu
+randr configuration(gui) -- arandr
+chess FICS -- jin
+screen brightness -- xbacklight (package xorg-xbacklight)
+leiningen intro -- lein help tutorial
+wireless connections info (passwd etc) -- /etc/network.d
+vimclojure nailgun server -- ~/scripts/ng-server
+pdf -- epdfview apvlv
+
+to fix the time (which was off by about 7 hrs):
+    # check the hardware clock from a running system
+    hwclock -r
+    # set the system time from the hardware clock
+    hwclock -s
+
+postgresql:
+  (as postgres user (su - postgres))
+    createuser -s U postgres --interactive
+        >Enter name of role to add: myUsualArchLoginName
+  (from login shell --not the postgres user)
+    createdb myDatabaseName
+  to delete database
+    dropdb myDatabaseName
